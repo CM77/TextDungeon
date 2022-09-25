@@ -30,6 +30,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -80,35 +81,45 @@
 						</Menu>
 					</menus>
 				</MenuBar>
-            <SplitPane dividerPositions="0.11622073578595318" orientation="VERTICAL" prefHeight="600.0" prefWidth="500.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="61.0" prefWidth="498.0">
-                     <children>
-                        <GridPane layoutX="14.0" layoutY="-24.0" prefHeight="66.0" prefWidth="498.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+				<SplitPane dividerPositions="0.11622073578595318" orientation="VERTICAL" prefWidth="514.0">
+					<items>
+						<AnchorPane>
+							<children>
+								<GridPane layoutX="14.0" layoutY="-24.0" prefHeight="66.0" prefWidth="498.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" />
+										<ColumnConstraints hgrow="SOMETIMES" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label fx:id="rauminfoLb" text="Label">
+											<GridPane.margin>
+												<Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+											</GridPane.margin>
+										</Label>
+									</children>
+								</GridPane>
+							</children>
+						</AnchorPane>
+								<ScrollPane>
+                     <content>
+                        <GridPane>
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" />
                             <ColumnConstraints hgrow="SOMETIMES" />
                           </columnConstraints>
                           <rowConstraints>
                             <RowConstraints vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label fx:id="rauminfoLb" text="Label">
-                                 <GridPane.margin>
-                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                 </GridPane.margin>
-                              </Label>
+                              <TextArea fx:id="mainTa" prefHeight="400.0" />
                            </children>
                         </GridPane>
-                     </children>
-                  </AnchorPane>
-                <AnchorPane>
-                     <children>
-                        <ScrollPane fx:id="mainTa" layoutX="158.0" layoutY="80.0" prefHeight="500.0" prefWidth="498.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
+                     </content>
+                  </ScrollPane>
+					</items>
+				</SplitPane>
 			</children>
 		</VBox>
 	</center>
