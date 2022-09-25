@@ -29,6 +29,8 @@ public class TextDungeonController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		DungeonCreator dc = new DungeonCreator();
+		mainTa.setText(dc.createDungeon());
 	}
 
 	public Parent getRoot() {
