@@ -17,7 +17,7 @@ public class DungeonCreator {
 		for (int i = 0; i < 3; i++) {
 			text += "_";
 		}
-		return text;
+		return "\n" + text;
 	}
 
 	private String createWalls() {
