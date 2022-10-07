@@ -31,6 +31,7 @@ public class TextDungeonController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		DungeonCreator dc = new DungeonCreator();
+		mainTa.setEditable(false);
 		mainTa.setText(dc.createDungeon());
 		mainTa.pseudoClassStateChanged(PseudoClass.getPseudoClass("centered"), true);
 	}
